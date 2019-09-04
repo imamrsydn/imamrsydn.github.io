@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>CHALOANANNART | How-to-draw </title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body id="Body">
@@ -16,10 +16,41 @@
     <!-- menu -->
     <div id="menu">
         <a href="index.html">Beranda</a>
-        <a href="cartoon.html">Cartoon</a>
-        <a href="prespektif.html">Prespektif</a>
-        <a href="lukis.html">Lukis</a>
+
+        <div id="dropdown">
+          <button id="dropbutton">Cartoon
+          </button>
+          <div id="dropdown-content">
+            <a href="cartoon.html">MANGA</a>
+            <a href="face.html">FACE</a>
+            <a href="hand.html">HAND</a>
+            <a href="arms.html">ARMS</a>
+            <a href="legs.html">LEGS</a>
+            <a href="body.html">BODY</a>
+          </div>
+        </div>
+
+        <div id="dropdown">
+            <button id="dropbutton">Prespektif
+            </button>
+            <div id="dropdown-content">
+              <a href="point1.html">One Point</a>
+              <a href="point2.html">Two Point</a>
+              <a href="point3.html">Three Point</a>
+            </div>
+        </div>
+
+        <div id="dropdown">
+          <button id="dropbutton">Lukis
+          </button>
+          <div id="dropdown-content">
+            <a href="lukisalam.html">Lukis Alam</a>
+            <a href="lukiswajah.html">Lukis Wajah</a>
+          </div>
+        </div>
+
         <a href="aboutme.html">About Me</a>
+        
     </div>
     <!-- sidebar -->
     <div id="sidebar">
@@ -49,34 +80,163 @@
                 mudah, untuk para pemula. disini juga tersedia beberapa 
                 contoh gambar untuk latihan kalian. terima kasih
             </p>
-            <!-- slide show -->
-
-            <!-- part content -->
-            <div id="partcontent1">
-                <h1>CARTOON</h1>
-                <p>
-                    ARTIKEL ARTIKEL ARTIKEL <br> <a href="cartoon.html">GO>></a>
-                </p>
-            </div>
-            <div id="partcontent2">
-                <h1>PRESPEKTIF</h1>
-                <p>
-                    ARTIKEL ARTIKEL ARTIKEL <br> <a href="prespektif.html">GO>></a>
-                </p>
-            </div>
-            <div id="partcontent3">
-                <h1>LUKIS ALAM</h1> 
-                <p>
-                    ARTIKEL ARTIKEL ARTIKEL <br> <a href="lukisalam.html">GO>></a>
-                </p>
-            </div>
-            <div id="partcontent4">
-                <h1>LUKIS WAJAH</h1>
-                <p>
-                    ARTIKEL ARTIKEL ARTIKEL <br> <a href="lukiswajah.html">GO>></a>
-                </p>
-            </div>
         </h1>
+            <!-- slide show -->
+            <div id="slideshow">
+
+                <div class="mySlides fade">
+                  <div id="number">1 / 8</div>
+                  <img src="images/background/Background16.jpg" style="width:100%">
+                  <div id="text">CARTOON</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div id="number">2 / 8</div>
+                  <img src="images/background/Background08.jpg" style="width:100%">
+                  <div id="text">PRESPEKTIF</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div id="number">3 / 8</div>
+                  <img src="images/background/Background11.jpg" style="width:100%">
+                  <div id="text">LUKIS ALAM</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div id="number">4 / 8</div>
+                  <img src="images/background/Background10.jpg" style="width:100%">
+                  <div id="text">LUKIS WAJAH</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div id="number">5 / 8</div>
+                  <img src="images/background/Background18.jpg" style="width:100%">
+                  <div id="text">CARTOON</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div id="number">6 / 8</div>
+                  <img src="images/background/Background07.jpg" style="width:100%">
+                  <div id="text">PRESPEKTIF</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div id="number">7 / 8</div>
+                  <img src="images/background/Background12.jpg" style="width:100%">
+                  <div id="text">LUKIS ALAM</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div id="number">8 / 8</div>
+                  <img src="images/background/Background09.jpg" style="width:100%">
+                  <div id="text">LUKIS WAJAH</div>
+                </div>
+                
+                <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a id="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            <br>
+                
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+              <span class="dot" onclick="currentSlide(7)"></span>
+              <span class="dot" onclick="currentSlide(8)"></span> 
+            </div>
+            
+            <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            <P>
+              NAH.... dalam seni menggambr atau melukis itu ada banyak cabangnya lho 
+              antara lain seperti cartoon, Perspektif, lukis wajah, dan lukis alam. 
+              di setiap jenis seni memiliki cara menggambar yang berbeda-beda dan arti 
+              yang beda juga, lebih baik kita langsung latihan aja karna menggambar 
+              tdak bisa hanya pake teori tapi harus langsung di coba . jadi... ayo 
+              langsung aja kita mulai latihna menggambar 
+            </P>
+            <!-- part content -->
+            <div id="partcontent" 
+            style="background-image: url(images/background/Background19.jpg);
+                   background-repeat: no-repeat;
+                   background-size: cover;">
+                <h1>CARTOON</h1>
+                <div id="href-partcontent">
+                  <p>Kartun adalah gambar dengan penampilan lucu yang mempresentasikan 
+                    suatu peristiwa.</p>
+                  <a href="cartoon.html">GO>></a>
+                </div>
+            </div>
+
+            <div id="partcontent"
+            style="background-image: url(images/background/Background21.jpg);
+                   background-repeat: no-repeat;
+                   background-size: cover;">
+                <h1>PRESPEKTIF</h1>
+                <div id="href-partcontent">
+                  <p>Perspektif berasal dari kata ”prospettiva” artinya gambar 
+                    pandangan sehingga memungkinkan untuk menggambar sebuah benda 
+                    atau ruang secara nyata</p>
+                  <a href="prespektif.html">GO>></a>
+                </div>
+            </div>
+
+            <div id="partcontent"
+            style="background-image: url(images/background/Background20.jpg);
+                   background-repeat: no-repeat;
+                   background-size: cover;">
+                <h1>LUKIS WAJAH</h1>
+                <div id="href-partcontent">
+                  <p>Seni lukis adalah salah satu cabang dari seni rupa, dan lukis 
+                    wajah lebih terfokus pada objek berbentuk wajah seseorang.
+                  </p>
+                  <a href="lukiswajah.html">GO>></a>
+                </div>
+            </div>
+
+            <div id="partcontent"
+            style="background-image: url(images/background/Background22.jpg);
+                   background-repeat: no-repeat;
+                   background-size: cover;">
+                <h1>LUKIS ALAM</h1>
+                <div id="href-partcontent">
+                  <p>Seni lukis adalah salah satu cabang dari seni rupa, dan lukis alam 
+                    lebih mendominasi kepada gambaran alam yang luas untuk diabadikan dengan 
+                    seni.
+                  </p>
+                  <a href="lukisalam.html">GO>></a>
+                </div>
+            </div>
     </div>
     <!-- footer -->
     <div id="footer">
@@ -84,5 +244,21 @@
         <img src="images/logo/fb logo.png" alt="fb">imam rasyidin <br>
         <img src="images/logo/gmail logo.png" alt="gmail">imam.rsydn@gmail.com <br>
     </div>
+
+    <!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+  (function () {
+      var options = {
+          whatsapp: "6287885196175", // WhatsApp number
+          call_to_action: "Message us", // Call to action
+          position: "right", // Position may be 'right' or 'left'
+      };
+      var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
+</script>
+<!-- /WhatsHelp.io widget -->
 </body>
 </html>

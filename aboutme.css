@@ -36,10 +36,56 @@
     text-decoration: none;
     font-size: 17px;
 }
-#menu a:hover
+/* dropdown */
+#menu a:hover, #dropdown:hover #dropbutton
 {
     background-color:rgb(112, 112, 112);
     color: black;
+}
+#dropdown 
+{
+    float: left;
+    overflow: hidden;
+}
+#dropdown #dropbutton
+{
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+#dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#dropdown-content a
+{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+#dropdown-content a:hover
+{
+    background-color: #ddd;
+}
+  
+#dropdown:hover #dropdown-content
+{
+    display: block;
 }
 /* sidebar */
 #sidebar
@@ -94,6 +140,7 @@
 #content h1 img
 {
     width: 300px;
+    border-radius: 50%;
 }
 #content h2
 {
@@ -107,8 +154,14 @@
 #content h3
 {
     margin-left: 50px;
-    color: white;
+    color: black;
     font-size: 17pt;
+    text-align: center;
+}
+#content h3 a
+{
+    padding-left: 5.27cm;
+    padding-right: 5.27cm;
 }
 #content marquee
 {
@@ -228,13 +281,54 @@
 /* kotak dalam content */
 #partcontent
 {
-    height: 150px;
-    width: 40%;
-    background-color: blue;
+    height: 500px;
+    width: 285px;
+    background-color: cyan;
     text-align: center;
-    margin-left: 75px;
-    margin-top: 75px;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     float: left;
+    overflow: hidden;
+    border: grey 1px solid;
+    border-radius: 15%;
+    box-shadow: 
+        0 15px 15px -5px rgb(49, 49, 49),
+        0 15px 15px 0  rgb(49, 49, 49),
+        0 15px 15px 0  rgb(49, 49, 49);
+}
+#partcontent img
+{
+    width: 100%;
+    height: 100%;
+}
+#partcontent img:hover
+{
+    background-color: rgba(128, 128, 128, 0.4)
+
+}
+#partcontent-2
+{
+    height: 250px;
+    width: 500px;
+    background-color: cyan;
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    overflow: hidden;
+    border: grey 1px solid;
+    border-radius: 15%;
+    box-shadow: 
+        0 15px 15px -5px rgb(49, 49, 49),
+        0 15px 15px 0  rgb(49, 49, 49),
+        0 15px 15px 0  rgb(49, 49, 49);
+}
+#partcontent-2 img
+{
+    width: 100%;
+    height: 100%;
 }
 /* footer */
 #footer
@@ -255,5 +349,11 @@
 /* lain-lain */
 a
 {
+    color: black;
+    text-decoration: none;
+}
+a:hover
+{
+    background-color: black;
     color: white;
 }

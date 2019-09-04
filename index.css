@@ -36,10 +36,56 @@
     text-decoration: none;
     font-size: 17px;
 }
-#menu a:hover
+/* dropdown */
+#menu a:hover, #dropdown:hover #dropbutton
 {
     background-color:rgb(112, 112, 112);
     color: black;
+}
+#dropdown 
+{
+    float: left;
+    overflow: hidden;
+}
+#dropdown #dropbutton
+{
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+#dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#dropdown-content a
+{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+#dropdown-content a:hover
+{
+    background-color: #ddd;
+}
+  
+#dropdown:hover #dropdown-content
+{
+    display: block;
 }
 /* sidebar */
 #sidebar
@@ -79,12 +125,14 @@
 #content
 {
     margin-left: 142px;
+    margin-right: 10px;
     height: 100%;
     background-color: white;
     overflow-x: hidden;
     padding-top: 0px;
     padding-bottom: 75px;
     display: block;
+    font-size: 30px;
 }
 /* header content */
 #content h1
@@ -125,13 +173,14 @@
 /* slideshow */
 #slideshow
 {
-    max-width: 1000px;
+    width: 1000px;
     position: relative;
-    margin: auto;
+    margin-left: 25px;
 }
 #slideshow img
 {
     height: 500px;
+    width: 1000px;
 }
 #prev, #next 
 {
@@ -141,7 +190,7 @@
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -159,18 +208,21 @@
 }
 #prev:hover
 {
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0,0,0,0.8);
+    color: white;
 }
 #next:hover
 {
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0,0,0,0.8);
+    color: white;
 }
 /* caption text */
 #text
 {
-    color: white;
+    color: black;
+    background-color: rgba(128, 128, 128, 0.4);
     font-size: 25px;
-    padding: 8px 12px;
+    padding: 8px 25px ;
     position: absolute;
     bottom: 8px;
     width: 100%;
@@ -199,7 +251,7 @@
   
   .active, .dot:hover
 {
-    background-color: white;
+    background-color: rgb(98, 98, 98);
 }
 .fade 
 {
@@ -227,104 +279,52 @@
   }
   
 /* kotak dalam content 1*/
-#partcontent1
+#partcontent
 {
     height: 500px;
-    width: 40%;
-    background-image: url(images/table1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 285px;
+    background-color: grey;
     text-align: center;
-    margin-left: 75px;
+    margin-left: 10px;
     margin-top: 75px;
     float: left;
     overflow: auto;
+    border: rgb(112, 112, 112);
+    box-shadow: 
+        0 15px 15px -5px rgb(49, 49, 49),
+        0 15px 15px 0  rgb(49, 49, 49),
+        0 15px 15px 0  rgb(49, 49, 49);
 }
-#partcontent1 h1
+#partcontent h1
 {
     background-color: rgba(128, 128, 128, 0.4);
     margin-top: 20px;
+    font-size: 40px
 }
-#partcontent1 p
+#partcontent p
 {
-    font-size: 35px;
-    color: white;
+    font-size: 25px;
+    color: black;
     text-align: left;
+
 }
-/* kotak dalam content 2*/
-#partcontent2
+#href-partcontent
 {
-    height: 500px;
-    width: 40%;
-    background-image: url(images/table2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    margin-left: 75px;
-    margin-top: 75px;
-    float: left;
-    overflow: auto;
+    width: 285px;
+    height: 20px;
+    padding-bottom: 5px;
+    position: static;
+    bottom: 0;
 }
-#partcontent2 h1
+#href-partcontent a
 {
-    background-color: rgba(128, 128, 128, 0.4);
-    margin-top: 20px;
+    color: black;
+    text-decoration: none;
 }
-#partcontent2 p
+#href-partcontent a:hover
 {
-    font-size: 35px;
+    background-color: grey;
     color: white;
-    text-align: left;
-}
-/* kotak dalam content 3*/
-#partcontent3
-{
-    height: 500px;
-    width: 40%;
-    background-image: url(images/table3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    margin-left: 75px;
-    margin-top: 75px;
-    float: left;
-    overflow: auto;
-}
-#partcontent3 h1
-{
-    background-color: rgba(128, 128, 128, 0.4);
-    margin-top: 20px;
-}
-#partcontent3 p
-{
-    font-size: 35px;
-    color: white;
-    text-align: left;
-}
-/* kotak dalam content 4*/
-#partcontent4
-{
-    height: 500px;
-    width: 40%;
-    background-image: url(images/table4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    margin-left: 75px;
-    margin-top: 75px;
-    float: left;
-    overflow: auto;
-}
-#partcontent4 h1
-{
-    background-color: rgba(128, 128, 128, 0.4);
-    margin-top: 20px;
-}
-#partcontent4 p
-{
-    font-size: 35px;
-    color: white;
-    text-align: left;
 }
 /* footer */
 #footer
@@ -343,12 +343,3 @@
     height: 1.5em;
 }
 /* lain-lain */
-a
-{
-    color: white;
-    text-decoration: none;
-}
-a:hover
-{
-    background-color: grey;
-}
